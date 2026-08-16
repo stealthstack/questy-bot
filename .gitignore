@@ -1,0 +1,11 @@
+# Secrets
+.env
+
+# Runtime state (per-user claims, real Discord IDs)
+daily_pot_claims.json
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/

@@ -1,0 +1,1322 @@
+[
+  {
+    "time": "0.41",
+    "runner": "KawhiKnot",
+    "pokemon": "Hitmonlee",
+    "category": "12-Boss",
+    "overall_iv": "86.5%",
+    "atk": 1135,
+    "atk_total": 9999,
+    "hp": 538,
+    "move_stones": [
+      "WL",
+      "WL",
+      "Sc"
+    ],
+    "bingo_bonuses": [
+      "ATK +5%",
+      "ATK +15%",
+      "ATK +20%"
+    ],
+    "status": "WR",
+    "video_link": "https://www.youtube.com/watch?v=e7TJD0d2SNA"
+  },
+  {
+    "time": "0.41",
+    "runner": "KawhiKnot",
+    "pokemon": "Weepinbell",
+    "category": "12-Boss",
+    "overall_iv": "60.5%",
+    "atk": 846,
+    "atk_total": 9810,
+    "hp": 675,
+    "move_stones": [
+      "WW",
+      "BB",
+      "BB"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "ATK +15%",
+      "ATK +15%"
+    ],
+    "status": "WR",
+    "video_link": "https://www.youtube.com/watch?v=e7TJD0d2SNA"
+  },
+  {
+    "time": "0.41",
+    "runner": "KawhiKnot",
+    "pokemon": "Machop",
+    "category": "12-Boss",
+    "overall_iv": "33.0%",
+    "atk": 533,
+    "atk_total": 8410,
+    "hp": 533,
+    "move_stones": [
+      "Sh",
+      "Sh",
+      "Sh"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "WAIT -20%",
+      "WAIT -20%"
+    ],
+    "status": "WR",
+    "video_link": "https://www.youtube.com/watch?v=e7TJD0d2SNA"
+  },
+  {
+    "time": "0.42",
+    "runner": "KawhiKnot",
+    "pokemon": "Weepinbell",
+    "category": "12-Boss",
+    "overall_iv": "60.5%",
+    "atk": 846,
+    "atk_total": 9752,
+    "hp": 675,
+    "move_stones": [
+      "WW",
+      "BB",
+      "BB"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "ATK +15%",
+      "ATK +15%"
+    ],
+    "status": "Legacy",
+    "video_link": "https://www.youtube.com/watch?v=kUPfaxui-RM"
+  },
+  {
+    "time": "0.42",
+    "runner": "KawhiKnot",
+    "pokemon": "Hitmonlee",
+    "category": "12-Boss",
+    "overall_iv": "86.5%",
+    "atk": 1135,
+    "atk_total": 9999,
+    "hp": 538,
+    "move_stones": [
+      "WL",
+      "WL",
+      "Sc"
+    ],
+    "bingo_bonuses": [
+      "ATK +5%",
+      "ATK +15%",
+      "ATK +20%"
+    ],
+    "status": "Legacy",
+    "video_link": "https://www.youtube.com/watch?v=kUPfaxui-RM"
+  },
+  {
+    "time": "0.42",
+    "runner": "KawhiKnot",
+    "pokemon": "Machop",
+    "category": "12-Boss",
+    "overall_iv": "33.0%",
+    "atk": 533,
+    "atk_total": 8351,
+    "hp": 533,
+    "move_stones": [
+      "Sh",
+      "Sh",
+      "Sh"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "WAIT -20%",
+      "WAIT -20%"
+    ],
+    "status": "Legacy",
+    "video_link": "https://www.youtube.com/watch?v=kUPfaxui-RM"
+  },
+  {
+    "time": "0.43",
+    "runner": "KawhiKnot",
+    "pokemon": "Hitmonlee",
+    "category": "12-Boss",
+    "overall_iv": "86.5%",
+    "atk": 1135,
+    "atk_total": 9999,
+    "hp": 538,
+    "move_stones": [
+      "WL",
+      "Sc",
+      "Sc"
+    ],
+    "bingo_bonuses": [
+      "ATK +5%",
+      "ATK +15%",
+      "ATK +20%"
+    ],
+    "status": "Legacy",
+    "video_link": "https://www.youtube.com/watch?v=AvPm3XbhBdQ"
+  },
+  {
+    "time": "0.43",
+    "runner": "KawhiKnot",
+    "pokemon": "Weepinbell",
+    "category": "12-Boss",
+    "overall_iv": "60.5%",
+    "atk": 846,
+    "atk_total": 9757,
+    "hp": 675,
+    "move_stones": [
+      "WW",
+      "BB",
+      "BB"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "ATK +15%",
+      "ATK +15%"
+    ],
+    "status": "Legacy",
+    "video_link": "https://www.youtube.com/watch?v=AvPm3XbhBdQ"
+  },
+  {
+    "time": "0.43",
+    "runner": "KawhiKnot",
+    "pokemon": "Machop",
+    "category": "12-Boss",
+    "overall_iv": "33.0%",
+    "atk": 533,
+    "atk_total": 8341,
+    "hp": 533,
+    "move_stones": [
+      "Sh",
+      "Sh",
+      "Sh"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "WAIT -20%",
+      "WAIT -20%"
+    ],
+    "status": "Legacy",
+    "video_link": "https://www.youtube.com/watch?v=AvPm3XbhBdQ"
+  },
+  {
+    "time": "0.43",
+    "runner": "stealthstack",
+    "pokemon": "Hitmonlee",
+    "category": "12-Boss",
+    "overall_iv": "80.5%",
+    "atk": 1126,
+    "atk_total": 9999,
+    "hp": 535,
+    "move_stones": [
+      "WL",
+      "WL",
+      "Sc"
+    ],
+    "bingo_bonuses": [
+      "ATK +5%",
+      "ATK +15%",
+      "ATK +20%"
+    ],
+    "status": "PB",
+    "video_link": "https://www.youtube.com/watch?v=fIzl9anLhzA&pp=ygUVc3RlYWx0aHN0YWNrIHNwZWVkcnVu"
+  },
+  {
+    "time": "0.43",
+    "runner": "stealthstack",
+    "pokemon": "Weepinbell",
+    "category": "12-Boss",
+    "overall_iv": "88.5%",
+    "atk": 833,
+    "atk_total": 8741,
+    "hp": 744,
+    "move_stones": [
+      "WW",
+      "BB",
+      "BB"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "ATK +15%",
+      "ATK +15%"
+    ],
+    "status": "PB",
+    "video_link": "https://www.youtube.com/watch?v=fIzl9anLhzA&pp=ygUVc3RlYWx0aHN0YWNrIHNwZWVkcnVu"
+  },
+  {
+    "time": "0.43",
+    "runner": "stealthstack",
+    "pokemon": "Machop",
+    "category": "12-Boss",
+    "overall_iv": "49.0%",
+    "atk": 568,
+    "atk_total": 6488,
+    "hp": 530,
+    "move_stones": [
+      "Sh",
+      "Sh",
+      "Sh"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "WAIT -20%",
+      "WAIT -20%"
+    ],
+    "status": "PB",
+    "video_link": "https://www.youtube.com/watch?v=fIzl9anLhzA&pp=ygUVc3RlYWx0aHN0YWNrIHNwZWVkcnVu"
+  },
+  {
+    "time": "0.44",
+    "runner": "Drew",
+    "pokemon": "Weepinbell",
+    "category": "12-Boss",
+    "overall_iv": "9.0%",
+    "atk": 459,
+    "atk_total": 9365,
+    "hp": 359,
+    "move_stones": [
+      "WW",
+      "BB",
+      "BB"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "ATK +15%",
+      "ATK +15%"
+    ],
+    "status": "PB",
+    "video_link": "https://www.youtube.com/watch?v=lx60lnpxxJ8"
+  },
+  {
+    "time": "0.44",
+    "runner": "Drew",
+    "pokemon": "Hitmonlee",
+    "category": "12-Boss",
+    "overall_iv": "30.0%",
+    "atk": 1100,
+    "atk_total": 9985,
+    "hp": 460,
+    "move_stones": [
+      "WL",
+      "WL",
+      "Sc"
+    ],
+    "bingo_bonuses": [
+      "ATK +5%",
+      "ATK +15%",
+      "ATK +20%"
+    ],
+    "status": "PB",
+    "video_link": "https://www.youtube.com/watch?v=lx60lnpxxJ8"
+  },
+  {
+    "time": "0.44",
+    "runner": "Drew",
+    "pokemon": "Machop",
+    "category": "12-Boss",
+    "overall_iv": "72.0%",
+    "atk": 619,
+    "atk_total": 7495,
+    "hp": 525,
+    "move_stones": [
+      "Sh",
+      "Sh",
+      "Sh"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "WAIT -20%",
+      "WAIT -20%"
+    ],
+    "status": "PB",
+    "video_link": "https://www.youtube.com/watch?v=lx60lnpxxJ8"
+  },
+  {
+    "time": "0.44",
+    "runner": "KawhiKnot",
+    "pokemon": "Hitmonlee",
+    "category": "12-Boss",
+    "overall_iv": "86.5%",
+    "atk": 1135,
+    "atk_total": 9999,
+    "hp": 538,
+    "move_stones": [
+      "WL",
+      "Sc",
+      "Sc"
+    ],
+    "bingo_bonuses": [
+      "ATK +5%",
+      "ATK +15%",
+      "ATK +20%"
+    ],
+    "status": "Legacy",
+    "video_link": "https://youtu.be/G-Wy3MHMsio?si=A0B2JAWLVOXtaPef"
+  },
+  {
+    "time": "0.44",
+    "runner": "KawhiKnot",
+    "pokemon": "Weepinbell",
+    "category": "12-Boss",
+    "overall_iv": "60.5%",
+    "atk": 846,
+    "atk_total": 9766,
+    "hp": 675,
+    "move_stones": [
+      "WW",
+      "BB",
+      "BB"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "ATK +15%",
+      "ATK +15%"
+    ],
+    "status": "Legacy",
+    "video_link": "https://youtu.be/G-Wy3MHMsio?si=A0B2JAWLVOXtaPef"
+  },
+  {
+    "time": "0.44",
+    "runner": "KawhiKnot",
+    "pokemon": "Machop",
+    "category": "12-Boss",
+    "overall_iv": "33.0%",
+    "atk": 533,
+    "atk_total": 8377,
+    "hp": 533,
+    "move_stones": [
+      "Sh",
+      "Sh",
+      "Sh"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "WAIT -20%",
+      "WAIT -20%"
+    ],
+    "status": "Legacy",
+    "video_link": "https://youtu.be/G-Wy3MHMsio?si=A0B2JAWLVOXtaPef"
+  },
+  {
+    "time": "0.44",
+    "runner": "stealthstack",
+    "pokemon": "Weepinbell",
+    "category": "12-Boss",
+    "overall_iv": "88.5%",
+    "atk": 833,
+    "atk_total": 8748,
+    "hp": 744,
+    "move_stones": [
+      "WW",
+      "BB",
+      "BB"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "ATK +15%",
+      "ATK +15%"
+    ],
+    "status": "Legacy",
+    "video_link": "https://www.youtube.com/watch?v=iuzbCYADC3Y&pp=ygUVc3RlYWx0aHN0YWNrIHNwZWVkcnVu"
+  },
+  {
+    "time": "0.44",
+    "runner": "stealthstack",
+    "pokemon": "Hitmonlee",
+    "category": "12-Boss",
+    "overall_iv": "41.5%",
+    "atk": 1072,
+    "atk_total": 9987,
+    "hp": 511,
+    "move_stones": [
+      "WL",
+      "Sc",
+      "Sc"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "ATK +15%",
+      "ATK +20%"
+    ],
+    "status": "Legacy",
+    "video_link": "https://www.youtube.com/watch?v=iuzbCYADC3Y&pp=ygUVc3RlYWx0aHN0YWNrIHNwZWVkcnVu"
+  },
+  {
+    "time": "0.44",
+    "runner": "stealthstack",
+    "pokemon": "Machop",
+    "category": "12-Boss",
+    "overall_iv": "49.0%",
+    "atk": 568,
+    "atk_total": 6496,
+    "hp": 530,
+    "move_stones": [
+      "Sh",
+      "Sh",
+      "Sh"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "WAIT -20%",
+      "WAIT -20%"
+    ],
+    "status": "Legacy",
+    "video_link": "https://www.youtube.com/watch?v=iuzbCYADC3Y&pp=ygUVc3RlYWx0aHN0YWNrIHNwZWVkcnVu"
+  },
+  {
+    "time": "0.46",
+    "runner": "Drew",
+    "pokemon": "Hitmonlee",
+    "category": "12-Boss",
+    "overall_iv": "30.0%",
+    "atk": 1100,
+    "atk_total": 9976,
+    "hp": 460,
+    "move_stones": [
+      "WL",
+      "WL",
+      "Sc"
+    ],
+    "bingo_bonuses": [
+      "ATK +5%",
+      "ATK +15%",
+      "ATK +20%"
+    ],
+    "status": "Legacy",
+    "video_link": "https://www.youtube.com/watch?v=B5A_RYKCIek"
+  },
+  {
+    "time": "0.46",
+    "runner": "Drew",
+    "pokemon": "Weepinbell",
+    "category": "12-Boss",
+    "overall_iv": "9.0%",
+    "atk": 459,
+    "atk_total": 9369,
+    "hp": 359,
+    "move_stones": [
+      "WW",
+      "BB",
+      "BB"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "ATK +15%",
+      "ATK +15%"
+    ],
+    "status": "Legacy",
+    "video_link": "https://www.youtube.com/watch?v=B5A_RYKCIek"
+  },
+  {
+    "time": "0.46",
+    "runner": "Drew",
+    "pokemon": "Machop",
+    "category": "12-Boss",
+    "overall_iv": "72.0%",
+    "atk": 619,
+    "atk_total": 7495,
+    "hp": 525,
+    "move_stones": [
+      "Sh",
+      "Sh",
+      "Sh"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "WAIT -20%",
+      "WAIT -20%"
+    ],
+    "status": "Legacy",
+    "video_link": "https://www.youtube.com/watch?v=B5A_RYKCIek"
+  },
+  {
+    "time": "0.46",
+    "runner": "KawhiKnot",
+    "pokemon": "Weepinbell",
+    "category": "12-Boss",
+    "overall_iv": "60.5%",
+    "atk": 846,
+    "atk_total": 9729,
+    "hp": 675,
+    "move_stones": [
+      "WW",
+      "BB",
+      "BB"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "ATK +15%",
+      "ATK +15%"
+    ],
+    "status": "Legacy",
+    "video_link": "https://www.youtube.com/watch?v=0ZPCxZ15Z6o"
+  },
+  {
+    "time": "0.46",
+    "runner": "KawhiKnot",
+    "pokemon": "Weepinbell",
+    "category": "12-Boss",
+    "overall_iv": "25.50%",
+    "atk": 793,
+    "atk_total": 8711,
+    "hp": 658,
+    "move_stones": [
+      "WW",
+      "WW",
+      "BB"
+    ],
+    "bingo_bonuses": [
+      "—",
+      "—",
+      "—"
+    ],
+    "status": "Legacy",
+    "video_link": "https://www.youtube.com/watch?v=0ZPCxZ15Z6o"
+  },
+  {
+    "time": "0.46",
+    "runner": "KawhiKnot",
+    "pokemon": "Machop",
+    "category": "12-Boss",
+    "overall_iv": "33.0%",
+    "atk": 533,
+    "atk_total": 7429,
+    "hp": 533,
+    "move_stones": [
+      "Sh",
+      "Sh",
+      "Sh"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "WAIT -20%",
+      "WAIT -20%"
+    ],
+    "status": "Legacy",
+    "video_link": "https://www.youtube.com/watch?v=0ZPCxZ15Z6o"
+  },
+  {
+    "time": "0.46",
+    "runner": "Pie3sradiation",
+    "pokemon": "Hitmonlee",
+    "category": "12-Boss",
+    "overall_iv": "77.0%",
+    "atk": 1142,
+    "atk_total": 9999,
+    "hp": 512,
+    "move_stones": [
+      "WW",
+      "Sc",
+      "Sc"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "ATK +15%",
+      "ATK +20%"
+    ],
+    "status": "PB",
+    "video_link": "https://www.youtube.com/watch?v=AZ24CIYzOVA"
+  },
+  {
+    "time": "0.46",
+    "runner": "Pie3sradiation",
+    "pokemon": "Machop",
+    "category": "12-Boss",
+    "overall_iv": "52.0%",
+    "atk": 538,
+    "atk_total": 8500,
+    "hp": 566,
+    "move_stones": [
+      "Sh",
+      "Sh",
+      "Sh"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "WAIT -20%",
+      "WAIT -20%"
+    ],
+    "status": "PB",
+    "video_link": "https://www.youtube.com/watch?v=AZ24CIYzOVA"
+  },
+  {
+    "time": "0.46",
+    "runner": "Pie3sradiation",
+    "pokemon": "Weepinbell",
+    "category": "12-Boss",
+    "overall_iv": "7.5%",
+    "atk": 757,
+    "atk_total": 9729,
+    "hp": 658,
+    "move_stones": [
+      "WW",
+      "BB",
+      "BB"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "ATK +15%",
+      "ATK +15%"
+    ],
+    "status": "PB",
+    "video_link": "https://www.youtube.com/watch?v=AZ24CIYzOVA"
+  },
+  {
+    "time": "0.47",
+    "runner": "Drew",
+    "pokemon": "Machop",
+    "category": "12-Boss",
+    "overall_iv": "72.0%",
+    "atk": 619,
+    "atk_total": 7495,
+    "hp": 525,
+    "move_stones": [
+      "Sh",
+      "Sh",
+      "Sh"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "WAIT -20%",
+      "WAIT -20%"
+    ],
+    "status": "Legacy",
+    "video_link": "https://www.youtube.com/watch?v=dhnjDc6rAfg"
+  },
+  {
+    "time": "0.47",
+    "runner": "Drew",
+    "pokemon": "Hitmonlee",
+    "category": "12-Boss",
+    "overall_iv": "48.50%",
+    "atk": 1132,
+    "atk_total": 9045,
+    "hp": 465,
+    "move_stones": [
+      "WL",
+      "Sc",
+      "Sc"
+    ],
+    "bingo_bonuses": [
+      "Other",
+      "ATK +15%",
+      "ATK +15%"
+    ],
+    "status": "Legacy",
+    "video_link": "https://www.youtube.com/watch?v=dhnjDc6rAfg"
+  },
+  {
+    "time": "0.47",
+    "runner": "Drew",
+    "pokemon": "Weepinbell",
+    "category": "12-Boss",
+    "overall_iv": "9.0%",
+    "atk": 459,
+    "atk_total": 9371,
+    "hp": 359,
+    "move_stones": [
+      "WW",
+      "BB",
+      "BB"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "ATK +15%",
+      "ATK +15%"
+    ],
+    "status": "Legacy",
+    "video_link": "https://www.youtube.com/watch?v=dhnjDc6rAfg"
+  },
+  {
+    "time": "0.47",
+    "runner": "Superness",
+    "pokemon": "Machop",
+    "category": "12-Boss",
+    "overall_iv": "45.5%",
+    "atk": 556,
+    "atk_total": 6343,
+    "hp": 535,
+    "move_stones": [
+      "Sh",
+      "Sh",
+      "Sh"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "WAIT -20%",
+      "WAIT -20%"
+    ],
+    "status": "Legacy",
+    "video_link": "https://www.youtube.com/watch?v=lrKwGaKx7_A"
+  },
+  {
+    "time": "0.47",
+    "runner": "Superness",
+    "pokemon": "Machop",
+    "category": "12-Boss",
+    "overall_iv": "45.5%",
+    "atk": 556,
+    "atk_total": 6139,
+    "hp": 535,
+    "move_stones": [
+      "Sh",
+      "Sh",
+      "Sh"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "WAIT -20%",
+      "WAIT -20%"
+    ],
+    "status": "Legacy",
+    "video_link": "https://www.youtube.com/watch?v=lrKwGaKx7_A"
+  },
+  {
+    "time": "0.47",
+    "runner": "Superness",
+    "pokemon": "Hitmonlee",
+    "category": "12-Boss",
+    "overall_iv": "27.5%",
+    "atk": 1082,
+    "atk_total": 9684,
+    "hp": 473,
+    "move_stones": [
+      "WW",
+      "Sc",
+      "Sc"
+    ],
+    "bingo_bonuses": [
+      "ATK +5%",
+      "Other",
+      "ATK +20%"
+    ],
+    "status": "PB",
+    "video_link": "https://www.youtube.com/watch?v=lrKwGaKx7_A"
+  },
+  {
+    "time": "0.47",
+    "runner": "Superness",
+    "pokemon": "Hitmonlee",
+    "category": "12-Boss",
+    "overall_iv": "36.5%",
+    "atk": 1056,
+    "atk_total": 8902,
+    "hp": 517,
+    "move_stones": [
+      "WW",
+      "WL",
+      "Sc"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "ATK +15%",
+      "ATK +20%"
+    ],
+    "status": "Legacy",
+    "video_link": "https://www.youtube.com/watch?v=lrKwGaKx7_A"
+  },
+  {
+    "time": "0.47",
+    "runner": "Superness",
+    "pokemon": "Hitmonlee",
+    "category": "12-Boss",
+    "overall_iv": "36.5%",
+    "atk": 1056,
+    "atk_total": 8934,
+    "hp": 517,
+    "move_stones": [
+      "WW",
+      "Sc",
+      "Sc"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "ATK +15%",
+      "ATK +20%"
+    ],
+    "status": "PB",
+    "video_link": "https://www.youtube.com/watch?v=lrKwGaKx7_A"
+  },
+  {
+    "time": "0.47",
+    "runner": "Superness",
+    "pokemon": "Hitmonlee",
+    "category": "12-Boss",
+    "overall_iv": "7.0%",
+    "atk": 1058,
+    "atk_total": 8841,
+    "hp": 456,
+    "move_stones": [
+      "WW",
+      "Sc",
+      ""
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "ATK +15%",
+      "ATK +20%"
+    ],
+    "status": "PB",
+    "video_link": "https://www.youtube.com/watch?v=lrKwGaKx7_A"
+  },
+  {
+    "time": "0.48",
+    "runner": "greeeen",
+    "pokemon": "Weepinbell",
+    "category": "12-Boss",
+    "overall_iv": "64.5%",
+    "atk": 835,
+    "atk_total": 9589,
+    "hp": 694,
+    "move_stones": [
+      "WW",
+      "WW",
+      "BB"
+    ],
+    "bingo_bonuses": [
+      "ATK +5%",
+      "ATK +15%",
+      "ATK +15%"
+    ],
+    "status": "PB",
+    "video_link": "https://www.youtube.com/watch?v=bGqs0rmAR8A"
+  },
+  {
+    "time": "0.48",
+    "runner": "greeeen",
+    "pokemon": "Hitmonlee",
+    "category": "12-Boss",
+    "overall_iv": "28.0%",
+    "atk": 1066,
+    "atk_total": 8928,
+    "hp": 490,
+    "move_stones": [
+      "WL",
+      "Sc",
+      "Sc"
+    ],
+    "bingo_bonuses": [
+      "ATK +5%",
+      "ATK +15%",
+      "ATK +20%"
+    ],
+    "status": "PB",
+    "video_link": "https://www.youtube.com/watch?v=bGqs0rmAR8A"
+  },
+  {
+    "time": "0.48",
+    "runner": "greeeen",
+    "pokemon": "Machop ",
+    "category": "12-Boss",
+    "overall_iv": "62.0%",
+    "atk": 604,
+    "atk_total": 7401,
+    "hp": 520,
+    "move_stones": [
+      "Sh",
+      "Sh",
+      "Sh"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "WAIT -20%",
+      "WAIT -20%"
+    ],
+    "status": "PB",
+    "video_link": "https://www.youtube.com/watch?v=bGqs0rmAR8A"
+  },
+  {
+    "time": "0.48",
+    "runner": "Pie3sradiation",
+    "pokemon": "Weepinbell",
+    "category": "12-Boss",
+    "overall_iv": "7.5%",
+    "atk": 757,
+    "atk_total": 9652,
+    "hp": 658,
+    "move_stones": [
+      "WW",
+      "BB",
+      "BB"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "ATK +15%",
+      "ATK +15%"
+    ],
+    "status": "Legacy",
+    "video_link": "https://www.youtube.com/watch?v=_YWf_N6953M"
+  },
+  {
+    "time": "0.48",
+    "runner": "Pie3sradiation",
+    "pokemon": "Weepinbell",
+    "category": "12-Boss",
+    "overall_iv": "46.0%",
+    "atk": 768,
+    "atk_total": 9732,
+    "hp": 724,
+    "move_stones": [
+      "WW",
+      "BB",
+      "BB"
+    ],
+    "bingo_bonuses": [
+      "ATK +5%",
+      "ATK +15%",
+      "ATK +15%"
+    ],
+    "status": "Legacy",
+    "video_link": "https://www.youtube.com/watch?v=_YWf_N6953M"
+  },
+  {
+    "time": "0.48",
+    "runner": "Pie3sradiation",
+    "pokemon": "Machop",
+    "category": "12-Boss",
+    "overall_iv": "52.0%",
+    "atk": 538,
+    "atk_total": 8466,
+    "hp": 566,
+    "move_stones": [
+      "Sh",
+      "Sh",
+      "Sh"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "WAIT -20%",
+      "WAIT -20%"
+    ],
+    "status": "Legacy",
+    "video_link": "https://www.youtube.com/watch?v=_YWf_N6953M"
+  },
+  {
+    "time": "0.48",
+    "runner": "TuffHunter",
+    "pokemon": "Victreebell",
+    "category": "12-Boss",
+    "overall_iv": "15.5%",
+    "atk": 903,
+    "atk_total": 8794,
+    "hp": 728,
+    "move_stones": [
+      "WW",
+      "BB",
+      "BB"
+    ],
+    "bingo_bonuses": [
+      "ATK +5%",
+      "ATK +10%",
+      "WAIT -10%"
+    ],
+    "status": "PB",
+    "video_link": "https://www.youtube.com/watch?v=3XPCPhpPAAY"
+  },
+  {
+    "time": "0.48",
+    "runner": "TuffHunter",
+    "pokemon": "Weepinbell",
+    "category": "12-Boss",
+    "overall_iv": "32.5%",
+    "atk": 773,
+    "atk_total": 8713,
+    "hp": 692,
+    "move_stones": [
+      "WW",
+      "WW",
+      "BB"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "ATK +15%",
+      "ATK +15%"
+    ],
+    "status": "PB",
+    "video_link": "https://www.youtube.com/watch?v=3XPCPhpPAAY"
+  },
+  {
+    "time": "0.48",
+    "runner": "TuffHunter",
+    "pokemon": "Machop",
+    "category": "12-Boss",
+    "overall_iv": "55.0%",
+    "atk": 610,
+    "atk_total": 7441,
+    "hp": 500,
+    "move_stones": [
+      "Sh",
+      "Sh",
+      "Sh"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "WAIT -20%",
+      "WAIT -20%"
+    ],
+    "status": "PB",
+    "video_link": "https://www.youtube.com/watch?v=3XPCPhpPAAY"
+  },
+  {
+    "time": "0.49",
+    "runner": "KapteinFint",
+    "pokemon": "Weepinbell",
+    "category": "12-Boss",
+    "overall_iv": "52.0%",
+    "atk": 782,
+    "atk_total": 8658,
+    "hp": 722,
+    "move_stones": [
+      "WW",
+      "BB",
+      "BB"
+    ],
+    "bingo_bonuses": [
+      "ATK +5%",
+      "ATK +15%",
+      "ATK +15%"
+    ],
+    "status": "PB",
+    "video_link": "https://www.youtube.com/watch?v=WXMo_cYWpoU"
+  },
+  {
+    "time": "0.49",
+    "runner": "KapteinFint",
+    "pokemon": "Hitmonlee",
+    "category": "12-Boss",
+    "overall_iv": "62.0%",
+    "atk": 1146,
+    "atk_total": 8975,
+    "hp": 478,
+    "move_stones": [
+      "WL",
+      "Sc",
+      "Sc"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "ATK +15%",
+      "ATK +20%"
+    ],
+    "status": "PB",
+    "video_link": "https://www.youtube.com/watch?v=WXMo_cYWpoU"
+  },
+  {
+    "time": "0.49",
+    "runner": "KapteinFint",
+    "pokemon": "Machop ",
+    "category": "12-Boss",
+    "overall_iv": "62.0%",
+    "atk": 554,
+    "atk_total": 8337,
+    "hp": 570,
+    "move_stones": [
+      "Sh",
+      "Sh",
+      "Sh"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "WAIT -20%",
+      "WAIT -20%"
+    ],
+    "status": "PB",
+    "video_link": "https://www.youtube.com/watch?v=WXMo_cYWpoU"
+  },
+  {
+    "time": "0.49",
+    "runner": "Lugiamaster0249",
+    "pokemon": "Hitmonlee",
+    "category": "12-Boss",
+    "overall_iv": "58.0%",
+    "atk": 1142,
+    "atk_total": 8760,
+    "hp": 474,
+    "move_stones": [
+      "WL",
+      "WL",
+      "Sc"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "ATK +15%",
+      "WAIT -20%"
+    ],
+    "status": "PB",
+    "video_link": "https://www.youtube.com/watch?v=cIpNfdJEd_o&t=90s"
+  },
+  {
+    "time": "0.49",
+    "runner": "Lugiamaster0249",
+    "pokemon": "Weepinbell",
+    "category": "12-Boss",
+    "overall_iv": "57.5%",
+    "atk": 829,
+    "atk_total": 8615,
+    "hp": 686,
+    "move_stones": [
+      "WW",
+      "BB",
+      "BB"
+    ],
+    "bingo_bonuses": [
+      "ATK +5%",
+      "ATK +15%",
+      "Other"
+    ],
+    "status": "PB",
+    "video_link": "https://www.youtube.com/watch?v=cIpNfdJEd_o&t=90s"
+  },
+  {
+    "time": "0.49",
+    "runner": "Lugiamaster0249",
+    "pokemon": "Machop ",
+    "category": "12-Boss",
+    "overall_iv": "59.5%",
+    "atk": 556,
+    "atk_total": 6171,
+    "hp": 563,
+    "move_stones": [
+      "Sh",
+      "Sh",
+      "Sh"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "WAIT -20%",
+      "WAIT -20%"
+    ],
+    "status": "PB",
+    "video_link": "https://www.youtube.com/watch?v=cIpNfdJEd_o&t=90s"
+  },
+  {
+    "time": "0.49",
+    "runner": "manster",
+    "pokemon": "Weepinbell",
+    "category": "12-Boss",
+    "overall_iv": "90.0%",
+    "atk": 850,
+    "atk_total": 9662,
+    "hp": 730,
+    "move_stones": [
+      "WW",
+      "WW",
+      "BB"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "ATK +15%",
+      "ATK +15%"
+    ],
+    "status": "PB",
+    "video_link": "https://www.youtube.com/watch?v=-I8JJMVnYIc"
+  },
+  {
+    "time": "0.49",
+    "runner": "manster",
+    "pokemon": "Hitmonlee",
+    "category": "12-Boss",
+    "overall_iv": "85.5%",
+    "atk": 1137,
+    "atk_total": 8977,
+    "hp": 534,
+    "move_stones": [
+      "WL",
+      "Sc",
+      "Sc"
+    ],
+    "bingo_bonuses": [
+      "ATK +5%",
+      "ATK +15%",
+      "ATK +20%"
+    ],
+    "status": "PB",
+    "video_link": "https://www.youtube.com/watch?v=-I8JJMVnYIc"
+  },
+  {
+    "time": "0.49",
+    "runner": "manster",
+    "pokemon": "Machop ",
+    "category": "12-Boss",
+    "overall_iv": "44.0%",
+    "atk": 544,
+    "atk_total": 5473,
+    "hp": 544,
+    "move_stones": [
+      "Sh",
+      "Sh",
+      "Sh"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "WAIT -20%",
+      "WAIT -20%"
+    ],
+    "status": "PB",
+    "video_link": "https://www.youtube.com/watch?v=-I8JJMVnYIc"
+  },
+  {
+    "time": "0.49",
+    "runner": "Pie3sradiation",
+    "pokemon": "Hitmonlee",
+    "category": "12-Boss",
+    "overall_iv": "37.5%",
+    "atk": 1054,
+    "atk_total": 9999,
+    "hp": 521,
+    "move_stones": [
+      "WL",
+      "Sc",
+      "Sc"
+    ],
+    "bingo_bonuses": [
+      "ATK +5%",
+      "ATK +15%",
+      "ATK +20%"
+    ],
+    "status": "Legacy",
+    "video_link": "https://www.youtube.com/watch?v=1Lzg6CfsUG0"
+  },
+  {
+    "time": "0.49",
+    "runner": "Pie3sradiation",
+    "pokemon": "Victreebell",
+    "category": "12-Boss",
+    "overall_iv": "53.5%",
+    "atk": 926,
+    "atk_total": 9860,
+    "hp": 781,
+    "move_stones": [
+      "WW",
+      "BB",
+      "BB"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "ATK +10%",
+      "WAIT -10%"
+    ],
+    "status": "Legacy",
+    "video_link": "https://www.youtube.com/watch?v=1Lzg6CfsUG0"
+  },
+  {
+    "time": "0.49",
+    "runner": "Pie3sradiation",
+    "pokemon": "Machop ",
+    "category": "12-Boss",
+    "overall_iv": "28.5%",
+    "atk": 540,
+    "atk_total": 7467,
+    "hp": 517,
+    "move_stones": [
+      "Sh",
+      "Sh",
+      "Sh"
+    ],
+    "bingo_bonuses": [
+      "WAIT -5%",
+      "WAIT -20%",
+      "WAIT -20%"
+    ],
+    "status": "Legacy",
+    "video_link": "https://www.youtube.com/watch?v=1Lzg6CfsUG0"
+  }
+]
