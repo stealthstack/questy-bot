@@ -1,6 +1,6 @@
 # QuestSpeed Bot
 
-A Discord bot for a Pokémon Quest speedrunning community. It serves community speedrun records, runs a "daily pot" Pokémon-claiming minigame, and simulates cooperative "expeditions" with a live multiplayer battle flow — all through `discord.py` commands and interactive button-based UI Views.
+A Discord bot for a Pokémon Quest speedrunning community. It serves community speedrun records and runs a "daily pot" Pokémon-claiming minigame — all through `discord.py` commands and interactive button-based UI Views.
 
 ## Features
 
@@ -8,8 +8,6 @@ A Discord bot for a Pokémon Quest speedrunning community. It serves community s
 - `!collection [index]` — browse the Pokémon you've claimed from the daily pot
 - `!dailypot` — claim one of 3 randomly selected speedrun Pokémon; shared per-day pot with per-user cooldowns
 - `!devpot` — developer variant of the daily pot flow
-- `!expedition` — start or join a cooperative expedition in the current channel; battles resolve once 3 players are ready
-- `!submitresults` — expedition leader submits battle results to close out the run
 - `!storage` — view the available power stones
 - `!ping` — basic latency check
 

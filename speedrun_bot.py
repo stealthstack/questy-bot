@@ -3,7 +3,6 @@ import json
 import os
 import random
 import requests
-import re
 from io import BytesIO
 from PIL import Image
 from discord.ext import commands
@@ -29,11 +28,8 @@ STONE_FILES = {
     "Stay Strong Stone": "images/staystrongstone.png"
 }
 
-# Available items for expedition rewards
+# Available items
 ITEMS = list(STONE_FILES.keys())
-
-# Global dictionary to track active expeditions
-active_expeditions = {}  # channel_id: Expedition
 
 # Set up logger
 logger = logging.getLogger('speedrun_bot')
@@ -153,140 +149,6 @@ def create_record_embed(record):
 
     return embed, files
 
-def create_expedition_results_embed(results, ctx):
-    """Create expedition results embed"""
-    embed = discord.Embed(title="Expedition Results", color=discord.Color.green())
-    for user_id, result in results.items():
-        user_id_str = str(user_id)
-        name = f"Dummy {user_id_str.split('_')[1]}" if user_id_str.startswith("dummy_") else (ctx.guild.get_member(user_id).display_name if ctx.guild.get_member(user_id) else "Unknown")
-        embed.add_field(name=name, value=f"Success: {result['success']}, Damage: {result['damage']}, Time: {result['time']:.1f}s", inline=False)
-    return embed
-
-class Expedition:
-    def __init__(self, channel_id, leader_id):
-        self.channel_id = channel_id
-        self.leader_id = leader_id
-        self.participants = {}  # user_id: pokemon_record
-        self.phase = "preparation"  # preparation, battle, results
-        self.start_time = None
-        self.battle_end_time = None
-        self.results = {}
-        self.message = None  # Reference to the expedition embed message
-        # Select 3 random Pokémon for the expedition
-        self.expedition_pokemon = [random.choice(SPEEDRUN_DB) for _ in range(3)]
-        # Add leader with random pokemon
-        record = random.choice(SPEEDRUN_DB)
-        self.participants[leader_id] = {"ready": True, "pokemon": record}
-
-    async def add_participant(self, user_id):
-        if self.phase != "preparation":
-            return False, False  # Cannot add participants after preparation phase
-        if user_id not in self.participants:
-            record = random.choice(SPEEDRUN_DB)
-            self.participants[user_id] = {"ready": True, "pokemon": record}
-            # Check if we have 3 participants now
-            if len(self.participants) == 3:
-                await self.start_battle()
-                return True, True  # added, started_battle
-            return True, False  # added, not started
-        return False, False  # not added, not started
-
-    async def remove_participant(self, user_id):
-        if user_id in self.participants and user_id != self.leader_id:
-            del self.participants[user_id]
-            return True
-        return False
-
-    async def set_ready(self, user_id, pokemon_record):
-        if user_id in self.participants:
-            self.participants[user_id]["ready"] = True
-            self.participants[user_id]["pokemon"] = pokemon_record
-            return True
-        return False
-
-    async def start_battle(self):
-        if all(p["ready"] for p in self.participants.values()):
-            self.phase = "battle"
-            self.start_time = datetime.now()
-            self.battle_end_time = self.start_time  # Immediate results
-            # Simulate battle results
-            for user_id in self.participants:
-                # Random battle outcome
-                success = random.choice([True, False])
-                self.results[user_id] = {
-                    "success": success,
-                    "damage": random.randint(100, 1000) if success else 0,
-                    "time": random.uniform(60, 300)  # 1-5 minutes
-                }
-            return True
-        return False
-
-    async def get_results(self):
-        if self.phase == "results":
-            return self.results
-        if self.phase == "battle" and datetime.now() >= self.battle_end_time:
-            self.phase = "results"
-            return self.results
-        return None
-
-    async def set_results(self, results_string):
-        """Parse and set expedition results from user input string"""
-        # Expected format: "Questy APP — 1:51 PM Expedition Results Unknown Success: True, Damage: 239, Time: 271.0s Dummy 1 Success: False, Damage: 0, Time: 158.8s Dummy 2 Success: False, Damage: 0, Time: 201.5s"
-        # Replace "Unknown" with the actual player name, but since it's submitted by the player, assume the first is the player
-        lines = results_string.strip().split('\n')
-        if not lines:
-            return False
-
-        # Parse each line
-        parsed_results = {}
-        for line in lines:
-            line = line.strip()
-            if not line:
-                continue
-            # Match patterns like "Questy APP Success: True, Damage: 239, Time: 271.0s"
-            match = re.match(r"(.+?) Success: (True|False), Damage: (\d+), Time: ([\d.]+)s", line)
-            if match:
-                name = match.group(1).strip()
-                success = match.group(2) == "True"
-                damage = int(match.group(3))
-                time = float(match.group(4))
-                parsed_results[name] = {
-                    "success": success,
-                    "damage": damage,
-                    "time": time
-                }
-
-        if not parsed_results:
-            return False
-
-        # Map to participants: assume the first non-dummy is the player, dummies are dummies
-        self.results = {}
-        player_found = False
-        for user_id, data in self.participants.items():
-            user_id_str = str(user_id)
-            if user_id_str.startswith("dummy_"):
-                dummy_num = int(user_id_str.split('_')[1])
-                dummy_key = f"Dummy {dummy_num}"
-                if dummy_key in parsed_results:
-                    self.results[user_id] = parsed_results[dummy_key]
-            else:
-                if not player_found:
-                    # Find the player name in parsed_results, assuming it's not Dummy
-                    for name, result in parsed_results.items():
-                        if not name.startswith("Dummy"):
-                            self.results[user_id] = result
-                            player_found = True
-                            break
-                if not player_found:
-                    # Fallback, use first non-dummy
-                    for name, result in parsed_results.items():
-                        if not name.startswith("Dummy"):
-                            self.results[user_id] = result
-                            break
-
-        self.phase = "results"
-        return True
-
 # ✅ CRITICAL: Enable message content intent properly
 intents = discord.Intents.default()
 intents.message_content = True  # This reads "!commands"
@@ -302,7 +164,7 @@ bot = commands.Bot(
 async def on_ready():
     print(f'✅ Bot is online as {bot.user}')
     print(f'🆔 Bot ID: {bot.user.id}')
-    print('🔧 Commands: !speedrun, !dailypot, !devpot, !collection, !expedition, !submitresults, !storage, !ping')
+    print('🔧 Commands: !speedrun, !dailypot, !devpot, !collection, !storage, !ping')
 
 @bot.command(name='speedrun')
 async def show_speedrun(ctx, category: str = None):
@@ -395,223 +257,13 @@ async def storage(ctx):
         stones_text = '\n'.join(f"• {stone}" for stone in ITEMS)
         embed.add_field(name="Stones", value=stones_text, inline=False)
 
-        embed.set_footer(text="These stones can be used in expeditions and other features.")
+        embed.set_footer(text="These stones can be used in speedrun runs and other features.")
 
         await ctx.send(embed=embed, files=files)
 
     except Exception as e:
         await ctx.send(f"❌ Error: {e}")
         print(f"Error: {e}")
-
-@bot.command(name='expedition')
-async def expedition(ctx):
-    """Start or join an expedition in this channel"""
-    channel_id = str(ctx.channel.id)
-    user_id = ctx.author.id
-
-    if channel_id in active_expeditions:
-        expedition = active_expeditions[channel_id]
-        if user_id not in expedition.participants:
-            added, started_battle = await expedition.add_participant(user_id)
-            if added:
-                if expedition.message:
-                    # Edit the existing embed
-                    embed = create_expedition_embed(expedition)
-                    view = ExpeditionView(expedition, ctx)
-                    await expedition.message.edit(embed=embed, view=view)
-                    view.message = expedition.message
-                else:
-                    await send_expedition_embed(ctx, expedition)
-
-        else:
-            await ctx.send(f"{ctx.author.mention} is already in the expedition!")
-    else:
-        expedition = Expedition(channel_id, user_id)
-        active_expeditions[channel_id] = expedition
-        await ctx.send(f"{ctx.author.mention} started a new expedition!")
-        # Send the expedition embed
-        await send_expedition_embed(ctx, expedition)
-
-@bot.command(name='submitresults')
-async def submit_results(ctx, *, results_string):
-    """Submit expedition results (leader only)"""
-    channel_id = str(ctx.channel.id)
-
-    if channel_id not in active_expeditions:
-        await ctx.send("❌ No active expedition in this channel.")
-        return
-
-    expedition = active_expeditions[channel_id]
-
-    if expedition.phase != "battle":
-        await ctx.send("❌ Expedition is not in battle phase.")
-        return
-
-    if str(ctx.author.id) != str(expedition.leader_id):
-        await ctx.send("❌ Only the expedition leader can submit results.")
-        return
-
-    success = await expedition.set_results(results_string)
-
-    if not success:
-        await ctx.send("❌ Failed to parse results. Please check the format. Expected: 'Name Success: True/False, Damage: X, Time: Ys' per line.")
-        return
-
-    # Send results embed
-    results = await expedition.get_results()
-    if results:
-        embed = discord.Embed(title="Expedition Results", color=discord.Color.green())
-        for user_id, result in results.items():
-            user_id_str = str(user_id)
-            name = f"Dummy {user_id_str.split('_')[1]}" if user_id_str.startswith("dummy_") else (ctx.guild.get_member(user_id).display_name if ctx.guild.get_member(user_id) else "Unknown")
-            embed.add_field(name=name, value=f"Success: {result['success']}, Damage: {result['damage']}, Time: {result['time']:.1f}s", inline=False)
-        await ctx.send(embed=embed)
-        # Remove expedition
-        del active_expeditions[channel_id]
-    else:
-        await ctx.send("❌ No results available.")
-
-def create_expedition_embed(expedition):
-    embed = discord.Embed(title="Expedition", description=f"Phase: {expedition.phase}", color=discord.Color.blue())
-    expedition_pokemon_text = ", ".join([p['pokemon'] for p in expedition.expedition_pokemon])
-    embed.add_field(name="Expedition Pokémon", value=expedition_pokemon_text, inline=False)
-    participants_text = ""
-    for user_id, data in expedition.participants.items():
-        ready = "Ready" if data["ready"] else "Not Ready"
-        pokemon = data["pokemon"]["pokemon"] if data["pokemon"] else "None"
-        user_id_str = str(user_id)
-        name = f"Dummy {user_id_str.split('_')[1]}" if user_id_str.startswith("dummy_") else f"<@{user_id_str}>"
-        participants_text += f"{name}: {ready}, Pokemon: {pokemon}\n"
-    embed.add_field(name="Participants", value=participants_text or "None", inline=False)
-    return embed
-
-async def send_expedition_embed(ctx, expedition):
-    embed = create_expedition_embed(expedition)
-    view = ExpeditionView(expedition, ctx)
-    message = await ctx.send(embed=embed, view=view)
-    expedition.message = message
-    view.message = message
-
-class ExpeditionView(discord.ui.View):
-    def __init__(self, expedition, ctx):
-        super().__init__(timeout=300)
-        self.expedition = expedition
-        self.ctx = ctx
-        self.dummy_counter = 1
-
-        # Add Join button for all users
-        join_button = discord.ui.Button(label="Join", style=discord.ButtonStyle.primary)
-        join_button.callback = self.join
-        self.add_item(join_button)
-
-        # Add Leave button for participants (not leader)
-        leave_button = discord.ui.Button(label="Leave", style=discord.ButtonStyle.secondary)
-        leave_button.callback = self.leave
-        self.add_item(leave_button)
-
-        # Add Ready button for participants
-        ready_button = discord.ui.Button(label="Ready", style=discord.ButtonStyle.success)
-        ready_button.callback = self.ready
-        self.add_item(ready_button)
-
-        # Add Start Battle button only for leader
-        if str(self.ctx.author.id) == str(expedition.leader_id):
-            start_button = discord.ui.Button(label="Start Battle", style=discord.ButtonStyle.danger)
-            start_button.callback = self.start_battle
-            self.add_item(start_button)
-
-        # Add Add Dummy button only for dev user
-        if str(expedition.leader_id) == "205180213384970240":
-            add_dummy_button = discord.ui.Button(label="Add Dummy", style=discord.ButtonStyle.secondary)
-            add_dummy_button.callback = self.add_dummy
-            self.add_item(add_dummy_button)
-
-    async def on_timeout(self):
-        # Remove expedition if it hasn't started
-        if self.expedition.phase == "preparation":
-            if self.expedition.channel_id in active_expeditions:
-                del active_expeditions[self.expedition.channel_id]
-            # Optionally disable buttons or update embed, but since it's timed out, no need
-
-    async def join(self, interaction):
-        user_id = interaction.user.id
-        if await self.expedition.add_participant(user_id):
-            await interaction.response.send_message(f"{interaction.user.mention} joined the expedition!", ephemeral=True)
-            await self.update_embed()
-        else:
-            await interaction.response.send_message("Already in expedition!", ephemeral=True)
-
-    async def leave(self, interaction):
-        user_id = interaction.user.id
-        if await self.expedition.remove_participant(user_id):
-            await interaction.response.send_message(f"{interaction.user.mention} left the expedition!", ephemeral=True)
-            await self.update_embed()
-        else:
-            await interaction.response.send_message("Cannot leave!", ephemeral=True)
-
-    async def ready(self, interaction):
-        user_id = interaction.user.id
-        # Pick a random pokemon for simplicity
-        record = random.choice(SPEEDRUN_DB)
-        if await self.expedition.set_ready(user_id, record):
-            await interaction.response.send_message(f"{interaction.user.mention} is ready!", ephemeral=True)
-            await self.update_embed()
-        else:
-            await interaction.response.send_message("Not in expedition!", ephemeral=True)
-
-    async def start_battle(self, interaction):
-        if interaction.user.id == self.expedition.leader_id:
-            if await self.expedition.start_battle():
-                await interaction.response.send_message("Battle started!", ephemeral=False)
-                # Start a task to check for results
-                self.ctx.bot.loop.create_task(self.check_results())
-            else:
-                await interaction.response.send_message("Not all ready!", ephemeral=True)
-        else:
-            await interaction.response.send_message("Only leader can start!", ephemeral=True)
-
-    async def add_dummy(self, interaction):
-        dummy_id = f"dummy_{self.dummy_counter}"
-        await self.expedition.add_participant(dummy_id)
-        self.dummy_counter += 1
-        await interaction.response.send_message(f"Added dummy participant!", ephemeral=False)
-        await self.update_embed()
-
-    async def update_embed(self):
-        embed = create_expedition_embed(self.expedition)
-        # Disable buttons if phase is not preparation
-        if self.expedition.phase != "preparation":
-            for child in self.children:
-                child.disabled = True
-        await self.message.edit(embed=embed, view=self)
-
-    async def check_results(self):
-        # Check immediately for results
-        results = await self.expedition.get_results()
-        if results:
-            # Send results embed
-            embed = discord.Embed(title="Expedition Results", color=discord.Color.green())
-            for user_id, result in results.items():
-                user_id_str = str(user_id)
-                name = f"Dummy {user_id_str.split('_')[1]}" if user_id_str.startswith("dummy_") else (self.ctx.guild.get_member(user_id).display_name if self.ctx.guild.get_member(user_id) else "Unknown")
-                embed.add_field(name=name, value=f"Success: {result['success']}, Damage: {result['damage']}, Time: {result['time']:.1f}s", inline=False)
-            await self.ctx.send(embed=embed)
-            # Remove expedition
-            del active_expeditions[self.expedition.channel_id]
-        else:
-            # If no results yet, wait 5 minutes and check again
-            await asyncio.sleep(300)
-            results = await self.expedition.get_results()
-            if results:
-                # Send results embed
-                embed = discord.Embed(title="Expedition Results", color=discord.Color.green())
-                for user_id, result in results.items():
-                    user_id_str = str(user_id)
-                    name = f"Dummy {user_id_str.split('_')[1]}" if user_id_str.startswith("dummy_") else (self.ctx.guild.get_member(user_id).display_name if self.ctx.guild.get_member(user_id) else "Unknown")
-                    embed.add_field(name=name, value=f"Success: {result['success']}, Damage: {result['damage']}, Time: {result['time']:.1f}s", inline=False)
-                await self.ctx.send(embed=embed)
-                # Remove expedition
-                del active_expeditions[self.expedition.channel_id]
 
 @bot.command(name='collection')
 async def show_collection(ctx, index: int = None):

@@ -7,11 +7,8 @@
 ## Steps
 - [x] Create `create_composite_image(images, filename, gap=0)` helper
 - [x] Create `create_record_embed(record)` helper
-- [x] Create `create_expedition_results_embed(results, ctx)` helper
 - [ ] Refactor `speedrun` command to use `create_record_embed`
 - [ ] Refactor `collection` command to use `create_record_embed`
 - [ ] Refactor `dailypot` command to use `create_record_embed`
 - [ ] Refactor `devpot` command to use `create_record_embed`
-- [ ] Refactor `submit_results` command to use `create_expedition_results_embed`
-- [ ] Refactor `ExpeditionView.check_results` to use `create_expedition_results_embed`
 - [ ] Test the refactored code
