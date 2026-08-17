@@ -554,7 +554,7 @@
     "runner": "KawhiKnot",
     "pokemon": "Weepinbell",
     "category": "12-Boss",
-    "overall_iv": "25.50%",
+    "overall_iv": "25.5%",
     "atk": 793,
     "atk_total": 8711,
     "hp": 658,
@@ -564,9 +564,9 @@
       "BB"
     ],
     "bingo_bonuses": [
-      "—",
-      "—",
-      "—"
+      "ATK +5%",
+      "ATK +15%",
+      "ATK +15%"
     ],
     "status": "Legacy",
     "video_link": "https://www.youtube.com/watch?v=0ZPCxZ15Z6o"
@@ -686,7 +686,7 @@
     "runner": "Drew",
     "pokemon": "Hitmonlee",
     "category": "12-Boss",
-    "overall_iv": "48.50%",
+    "overall_iv": "48.5%",
     "atk": 1132,
     "atk_total": 9045,
     "hp": 465,
