@@ -17,7 +17,9 @@ The bot reads its token from the `DISCORD_BOT_TOKEN` environment variable (loade
 
 ## Data pipeline
 
-Speedrun records flow: `speedrun_data.csv` (source of truth, hand-edited/exported) → `extract_csv.py` → `speedrun_data.json` (loaded into memory at startup as `SPEEDRUN_DB`). Re-run `extract_csv.py` after editing the CSV to regenerate the JSON that the bot actually reads. `speedrun_data.json` is never written back to by the bot itself.
+Speedrun records flow: `speedrun_data.csv` (source of truth, hand-edited/exported) → `extract_csv.py` → `speedrun_data.json` (loaded into memory at startup as `SPEEDRUN_DB`). Re-run `extract_csv.py` after editing the CSV to regenerate the JSON that the bot actually reads. `speedrun_data.json` is never written back to by the bot itself. Note: `extract_csv.py`'s emoji `print()` calls crash on Windows under the default `cp1252` console encoding — run it with `PYTHONIOENCODING=utf-8` set, or fix the script, if you hit `UnicodeEncodeError`.
+
+`speedrun_data_meta.json` holds one field, `data_as_of` (`YYYY-MM-DD`), shown in record embed footers as a dataset-wide freshness marker. Bump it whenever the CSV is refreshed; individual records aren't timestamped since they're never deleted, only re-statused (e.g. `PB` → `Legacy`).
 
 `download_images.py` fetches the stone/thumbnail PNGs in `images/` from Serebii and a third-party GitHub mirror — a one-off setup script, not something the bot calls at runtime.
 

@@ -39,6 +39,8 @@ python extract_csv.py
 
 `download_images.py` is a one-time setup script that fetches the stone and Pokémon thumbnail images used in embeds into `images/`.
 
+`speedrun_data_meta.json` holds a single `data_as_of` date shown in record embed footers so the community knows how fresh the leaderboard is. Update it whenever the CSV is refreshed — records aren't deleted over time, just re-statused (e.g. a `PB` becoming `Legacy` once beaten), so one dataset-wide date is enough; no per-record timestamps needed.
+
 ## Notes
 
 - `daily_pot_claims.json` is runtime state (per-user cooldowns and collections) and is git-ignored — it's generated automatically the first time `!dailypot` runs.

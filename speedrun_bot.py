@@ -18,6 +18,12 @@ load_dotenv()
 with open('speedrun_data.json', 'r', encoding='utf-8') as f:
     SPEEDRUN_DB = json.load(f)
 
+# Data freshness marker — update speedrun_data_meta.json whenever the
+# speedrun data is refreshed (records aren't removed, just re-statused
+# e.g. PB -> Legacy, so a single "as of" date is enough).
+with open('speedrun_data_meta.json', 'r', encoding='utf-8') as f:
+    DATA_AS_OF = datetime.strptime(json.load(f)['data_as_of'], '%Y-%m-%d').strftime('%b %d, %Y')
+
 # Stone image file mapping
 STONE_FILES = {
     "WL": "images/waitlessstone.png",
@@ -129,7 +135,7 @@ def create_record_embed(record):
     embed.add_field(name="📺 Watch Run", value=f"[YouTube Link]({record['video_link']})", inline=False)
 
     # Footer
-    embed.set_footer(text=f"Runner: {record['runner']} • Data from Pokemon Quest Speedrun Community")
+    embed.set_footer(text=f"Runner: {record['runner']} • Data from Pokemon Quest Speedrun Community • Data as of {DATA_AS_OF}")
 
     # Thumbnail
     pokemon_thumbnails = {
@@ -399,7 +405,7 @@ async def show_collection(ctx, index: int = None):
             )
 
             # Footer with runner info
-            embed.set_footer(text=f"Runner: {record['runner']} • Data from Pokemon Quest Speedrun Community")
+            embed.set_footer(text=f"Runner: {record['runner']} • Data from Pokemon Quest Speedrun Community • Data as of {DATA_AS_OF}")
 
             # Add a thumbnail (Pokémon icon)
             pokemon_thumbnails = {
@@ -848,7 +854,7 @@ class DailyPotView(discord.ui.View):
         embed.add_field(name="📺 Watch Run", value=f"[YouTube Link]({record['video_link']})", inline=False)
 
         # Footer
-        embed.set_footer(text=f"Runner: {record['runner']} • Data from Pokemon Quest Speedrun Community")
+        embed.set_footer(text=f"Runner: {record['runner']} • Data from Pokemon Quest Speedrun Community • Data as of {DATA_AS_OF}")
 
         # Thumbnail
         pokemon_thumbnails = {
@@ -1116,7 +1122,7 @@ class DevPotView(discord.ui.View):
         embed.add_field(name="📺 Watch Run", value=f"[YouTube Link]({record['video_link']})", inline=False)
 
         # Footer
-        embed.set_footer(text=f"Runner: {record['runner']} • Data from Pokemon Quest Speedrun Community")
+        embed.set_footer(text=f"Runner: {record['runner']} • Data from Pokemon Quest Speedrun Community • Data as of {DATA_AS_OF}")
 
         # Thumbnail
         pokemon_thumbnails = {
