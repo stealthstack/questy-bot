@@ -21,7 +21,7 @@ Speedrun records flow: `speedrun_data.csv` (source of truth, hand-edited/exporte
 
 `speedrun_data_meta.json` holds one field, `data_as_of` (`YYYY-MM-DD`), shown in record embed footers as a dataset-wide freshness marker. Bump it whenever the CSV is refreshed; individual records aren't timestamped since they're never deleted, only re-statused (e.g. `PB` → `Legacy`).
 
-`download_images.py` fetches the stone/thumbnail PNGs in `images/` from Serebii and a third-party GitHub mirror — a one-off setup script, not something the bot calls at runtime.
+`archive/download_images.py` fetched the stone/thumbnail PNGs now committed under `images/`, from Serebii and a third-party GitHub mirror. Already run, its output already committed; kept only for provenance/re-fetching, not called by the bot. Needs `requests`, which isn't in `requirements.txt` since nothing else uses it.
 
 `daily_pot_claims.json` is runtime state (per-user cooldowns and collections, plus the current day's shared pot), read and rewritten on every relevant command. It is not sample data — treat it as a live database file.
 

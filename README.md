@@ -37,7 +37,7 @@ Speedrun records live in `speedrun_data.csv` (the hand-maintained source of trut
 python extract_csv.py
 ```
 
-`download_images.py` is a one-time setup script that fetches the stone and Pokémon thumbnail images used in embeds into `images/`.
+`archive/download_images.py` is the one-time setup script that originally fetched the stone and Pokémon thumbnail images now committed under `images/`. It's not needed to run the bot; kept only for reference in case those images ever need re-fetching (requires `requests`, not in `requirements.txt`).
 
 `speedrun_data_meta.json` holds a single `data_as_of` date shown in record embed footers so the community knows how fresh the leaderboard is. Update it whenever the CSV is refreshed. Records aren't deleted over time, just re-statused (e.g. a `PB` becoming `Legacy` once beaten), so one dataset-wide date is enough; no per-record timestamps needed.
 
